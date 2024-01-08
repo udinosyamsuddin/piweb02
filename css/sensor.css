@@ -1,0 +1,554 @@
+html,body{
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  /*background : #0599BA;*/
+}
+
+.kanan {
+  width:60%;
+  height:100%;
+  display:block;
+  background:#05BABA;
+  float:right;
+  border: none;
+  margin:0;
+  padding:0;
+}
+
+
+.kiri {
+  width:40%;
+  height:100%;
+  display:block;
+  background:#fff;
+  float:left;
+  /*background: #efefef;*/
+  background: #fff;
+}
+
+.gbr {
+width: 100%;
+height: 80%;
+border: none;
+
+}
+
+
+.box {
+width: 100%;
+height: 150px;
+display: block;
+background: none;
+text-align: center;
+font-family : Helvatica, arial ;
+font-size : 7vw;
+font-weight :bold;
+color :  #fff;
+margin:  0 0 70px 0;
+
+
+}
+
+
+.box_batas {
+clear: both;
+height: 2px;
+border-bottom: 2px solid #fff;
+
+}
+
+.box_atas {
+clear: both;
+height: 5%;
+}
+
+.clear {
+clear: both;
+width: 100%;
+height: 1px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height:55px;
+  background: #f5f7be;
+  display: block;
+  border-top: 2px solid #fff;
+  font-weight :bold;
+  color :  #000;
+  font-family: Arial, 'Helvetica', sans-serif
+
+}
+
+
+.celcus {
+float: left;
+width: auto;
+	background : #fff;
+	height : 300px;
+	
+	}
+
+
+.humi {
+float: right;
+width: auto;
+	background : #000;
+	height : 300px;
+	}
+
+
+  .temp {
+  width: 45%;
+  height:80px;
+  display: block;
+  border: none;
+  margin: 0 auto;;
+  text-align: right;
+  padding: 10px 0 25px 0;
+  float: left;
+  }
+
+  .data_temp {
+    width: 40%;
+    height:80px;
+    display: block;
+    border: none;
+    margin: 0 auto;;
+    text-align: left;
+    padding: 10px 0 25px 0;
+    float: right
+
+  }
+
+
+
+
+
+/*---digital clock---*/
+
+#Date  {
+font-size: 7vw;
+display: block;
+text-align: center;
+margin: 0 0 0 10px;
+}
+
+ul {
+    width: auto;
+    margin: 5px 0 0 0;
+    padding: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    text-align: center;
+    font-family: 'Arial', Helvetica;
+
+}
+
+#point {
+    position: relative;
+    -moz-animation: mymove 1s ease infinite;
+    -webkit-animation: mymove 1s ease infinite;
+
+
+}
+
+/* Simple Animation */
+@-webkit-keyframes mymove {
+    0% {opacity: 1.0;
+    text-shadow: 0 0 20px #00c6ff;
+}
+
+50% {
+    opacity: 0;
+    text-shadow: none;
+}
+
+100% {
+    opacity: 1.0;
+    text-shadow: 0 0 20px #00c6ff;
+}
+}
+
+@-moz-keyframes mymove {
+    0% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+
+    50% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    100% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    };
+}
+
+
+/*--stopwatch--*/
+.form-control {
+
+  font-size:  30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+  ::selection {
+      background: #000;
+      color: #fff;
+  }
+
+  button:hover {
+      transition: all .5s ease;
+      transform: scale(1.05);
+  }
+
+
+  .clock {
+      padding: 5px 0;
+
+  	width : auto;
+  }
+
+ .clock .input-wrapper {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+ .clock .input-wrapper .input {
+      display: flex;
+      justify-content: center;
+  }
+
+  .clock .input-wrapper .input input {
+      margin-right: 5px;
+      height: 40px;
+      width: 53px;
+      font-size: 7vm;
+      text-align: center;
+  }
+
+  .clock .input-wrapper .input select {
+      height: 46px;
+  }
+
+  .clock .input-wrapper .input input:focus,
+  .clock .input-wrapper .input input:active,
+  .clock .input-wrapper .input select:focus,
+  .clock .input-wrapper .input select:active,
+  .clock .input-wrapper button:focus,
+  .clock .input-wrapper button:active {
+      outline: none;
+      box-shadow: none;
+      border-color: rgb(127, 255, 0);
+  }
+
+  .clock .buttons-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  .clock .input-wrapper button {
+      margin: 0 auto;
+      background-color: rgb(127, 255, 0);
+      padding:2px 4px;
+      text-transform: uppercase;
+      font-weight: bold;
+       margin:  50px 5px 20px 5px;
+  }
+
+  .clock #timer {
+      display: none;
+      margin: 25px;
+  }
+
+  .clock #timer .endMessage {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: all .35s ease;
+  }
+
+  .clock #timer .clock-wrapper {
+      display: flex;
+      justify-content: center;
+  }
+
+  .clock #timer .clock-wrapper span {
+
+      font-weight: bold;
+      transition: all .2s ease;
+      font-family : Helvatica, arial ;
+      font-size : 100px;
+      color: #fff;
+
+  }
+
+  .clock #timer .clock-wrapper span.white {
+    transition: all .2s ease;
+    color: rgb(233, 19, 19);
+    font-size: 5vm;
+  }
+
+  .clock #timer .clock-wrapper span.red.hours,
+  .clock #timer .clock-wrapper span.red.minutes,
+  .clock #timer .clock-wrapper span.red.dots {
+    width: 0;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .clock #timer .clock-wrapper span.dots {
+      margin-top: -5px;
+  }
+
+  .clock button#stop-timer {
+      margin: 0 10px;
+      background-color: rgb(233, 19, 19);
+      padding: 2px 4px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 5px;
+      display: none;
+      color: #fff;
+      width: 80px;
+  }
+
+  .clock button#reset-timer {
+    width: 80px;
+    margin: 0;
+    background-color: #000;
+    padding: 2px 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none;
+    color: #fff;
+  }
+
+  .clock button#resume-timer {
+      width: 80px;
+      margin: 0;
+      background-color: rgb(127, 255, 0);
+      padding: 2px 4px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 5px;
+      display: none;
+      color: #fff;
+  }
+
+  .clock button#resume-timer:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: rgb(127, 255, 0);
+  }
+
+  .clock button#stop-timer:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: rgb(233, 19, 19);
+  }
+
+  body .clock button#reset-timer:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+  }
+
+  @media only screen and (max-width: 768px) {
+       .clock {
+          padding: 25px 0;
+      }
+
+       .clock #timer {
+          display: none;
+          padding: 25px 0;
+      }
+
+       .clock #timer .clock-wrapper span {
+          font-size: 60px;
+      }
+
+       .clock #timer .clock-wrapper span.dots {
+          margin-top: -3px;
+      }
+
+       .clock #timer .clock-wrapper span.red {
+        font-size: 120px;
+      }
+  }
+
+
+/*--runtext--*/
+/* eocjsNewsticker v0.3.3 */
+
+.eocjs-newsticker {
+  padding: 20px 0;
+
+
+}
+
+.eocjs-newsticker .eocjs-newsticker-container {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+  text-align:  right;
+}
+
+.eocjs-newsticker .eocjs-newsticker-one,
+.eocjs-newsticker .eocjs-newsticker-two {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.eocjs-newsticker-loader {
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 2px solid #555555;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: eocjs-newsticker-spin 1s linear infinite;
+}
+
+@keyframes eocjs-newsticker-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.logo {
+width: 60px;
+height: 60px;
+position: fixed;
+bottom: 0;
+background: none;
+display: block;
+margin: 0 0 76px 5px;
+border:none;
+right: 3px;
+
+}
+
+
+.logo_text {
+width: 100px;
+height: 20px;
+position: fixed;
+bottom: 0;
+background: none;
+display: block;
+margin: 0px 0 53px 3px;
+border:none;
+font-size: 12px;
+font-family:  Arial, "Helvetica", sans-serif;
+font-weight: bold;
+color: #fff;
+right: 3px;
+text-align: right;
+}
+
+
+ #element_to_pop_up { display:none; }
+ 
+ 
+ 
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
